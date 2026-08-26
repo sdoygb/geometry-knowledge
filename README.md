@@ -2,7 +2,7 @@
 
 **几何论（共扼谱几何 CSG）知识库插件** —— 用于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（DSH）。
 
-纯离线 BM25 检索：**166 篇文章全文 + 3222 个分块 + 860 条主库真理层**，不依赖任何外部 API、嵌入模型或网络，安装即用、零运行时依赖。
+纯离线 BM25 检索：**208 篇文章全文 + 3833 个分块 + 871 条主库真理层**，不依赖任何外部 API、嵌入模型或网络，安装即用、零运行时依赖。
 
 ## 几何论是什么
 
@@ -39,14 +39,14 @@ dsh web
 ### tarball 安装
 
 ```sh
-pnpm pack            # 生成 geometry-knowledge-0.1.4.tgz
-dsh plugin --profile web add ./geometry-knowledge-0.1.4.tgz
+pnpm pack            # 生成 geometry-knowledge-0.1.5.tgz
+dsh plugin --profile web add ./geometry-knowledge-0.1.5.tgz
 ```
 
 ### Git 安装
 
 ```sh
-dsh plugin --profile web add github:sdoygb/conjugate-spectral-geometry#<commit-sha>
+dsh plugin --profile web add github:sdoygb/geometry-knowledge#<commit-sha>
 ```
 
 Git 安装拉取源码，pnpm 会运行 `prepare` 脚本构建 `dist/`；首次安装需在 profile 的 `pnpm-workspace.yaml` 中为包键添加 `allowBuilds` 授权（dsh 会打印确切写法）。
