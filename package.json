@@ -1,0 +1,60 @@
+{
+  "name": "geometry-knowledge",
+  "version": "0.1.5",
+  "description": "几何论（共扼谱几何 CSG）知识库插件：纯离线 BM25 检索 166 篇文章全文 + 3222 分块 + 860 条主库真理层，零运行时依赖。Conjugate Spectral Geometry knowledge base for DeepSeek Harness: fully offline BM25 retrieval over 166 articles, 3222 chunks and 860 verified truths.",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "data",
+    "cordis.patch.yml"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "author": {
+    "name": "sdoygb",
+    "email": "sdoygb@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/sdoygb/geometry-knowledge/issues"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "tsc -p tsconfig.json",
+    "export": "python3 scripts/export_dsh_index.py",
+    "smoke": "node test/smoke.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "cordis",
+    "geometry",
+    "knowledge-base",
+    "bm25"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdoygb/geometry-knowledge.git"
+  },
+  "homepage": "https://github.com/sdoygb/geometry-knowledge#readme",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0",
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.6"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  }
+}
