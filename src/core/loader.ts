@@ -26,6 +26,8 @@ export interface TruthRecord {
   chunk_id: string
   permanent_number?: string
   formula_name?: string
+  verified_at?: string
+  source?: string
   text: string
   [k: string]: unknown
 }
